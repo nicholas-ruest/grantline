@@ -1,0 +1,33 @@
+[
+  {
+    "schema_version": 1,
+    "id": "procurement-root",
+    "principal": "example-co",
+    "delegate": "planning-agent",
+    "actions": ["quote", "purchase"],
+    "resources": ["catalog/*"],
+    "models": ["approved-model-v1", "approved-model-v2"],
+    "counterparties": ["supplier/*"],
+    "budget": { "spend_cents": 10000, "tool_calls": 30, "tokens": 50000 },
+    "valid_from": 1790540000,
+    "expires_at": 1790626400,
+    "remaining_delegations": 2,
+    "approval_above_cents": 5000
+  },
+  {
+    "schema_version": 1,
+    "id": "laptop-quotes",
+    "principal": "example-co",
+    "delegate": "comparison-agent",
+    "parent_id": "procurement-root",
+    "actions": ["quote"],
+    "resources": ["catalog/laptops/*"],
+    "models": ["approved-model-v1"],
+    "counterparties": ["supplier/approved-*"],
+    "budget": { "spend_cents": 3000, "tool_calls": 12, "tokens": 20000 },
+    "valid_from": 1790541000,
+    "expires_at": 1790580000,
+    "remaining_delegations": 1,
+    "approval_above_cents": 1500
+  }
+]

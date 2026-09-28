@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "laptop-quotes",
+  "principal": "example-co",
+  "delegate": "comparison-agent",
+  "parent_id": "procurement-root",
+  "actions": ["quote"],
+  "resources": ["catalog/laptops/*"],
+  "models": ["approved-model-v1"],
+  "counterparties": ["supplier/approved-*"],
+  "budget": { "spend_cents": 3000, "tool_calls": 12, "tokens": 20000 },
+  "valid_from": 1790541000,
+  "expires_at": 1790580000,
+  "remaining_delegations": 1,
+  "approval_above_cents": 1500
+}

@@ -1,0 +1,10 @@
+{
+  "action": "quote",
+  "resource": "catalog/laptops/ultralight",
+  "model": "approved-model-v1",
+  "counterparty": "supplier/approved-north",
+  "spend_cents": 900,
+  "tool_calls": 4,
+  "tokens": 6000,
+  "timestamp": 1790542000
+}
